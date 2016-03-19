@@ -4,6 +4,8 @@ A fast two-way encryption module to generate unique, random-appearing, non-seque
 
 [![Build Status](https://travis-ci.org/zefferus/concealer.svg?branch=master)](https://travis-ci.org/zefferus/concealer)![Current Version](https://img.shields.io/npm/v/concealer.svg)
 
+Development on **Concealer** is sponsored by [Sparo Labs](http://www.sparolabs.com/).
+
 And to make the output more URL-friendly, the algorithm automatically tries to avoid generating output with common English curse words by reserving some letters (`cfhistuCFHISTU`) for use as separators.
 
 ***Security Note:*** This module uses the SKIP32 algorithm, which is a 80-bit key, 32-bit block symmetric cipher based on [Skipjack](https://en.wikipedia.org/wiki/Skipjack_%28cipher%29). This module is not intended to be cryptographically secure; it may be possible, with enough encoded results, to determine the key and salt used and break the encryption. Please ***do not*** use this module for anything that you must keep absolutely secure; this module is more useful for making URL-ready strings representing database primary keys that you would rather not directly expose to the end-user.
