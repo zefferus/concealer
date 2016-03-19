@@ -1,0 +1,38 @@
+{
+  "name": "concealer",
+  "version": "1.0.0",
+  "description": "A primary key encoding utility",
+  "main": "src/concealer.js",
+  "scripts": {
+    "lint": "node_modules/.bin/eslint src",
+    "test": "node_modules/.bin/tap --cov --reporter=spec test/**/*.test.js",
+    "precoverage": "node_modules/.bin/rimraf coverage",
+    "coverage": "node_modules/.bin/tap --coverage-report=lcov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zefferus/concealer"
+  },
+  "keywords": [
+    "primary",
+    "unique",
+    "key",
+    "encoding",
+    "random"
+  ],
+  "author": "Brandon Belvin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zefferus/concealer/issues"
+  },
+  "homepage": "https://github.com/zefferus/concealer#readme",
+  "devDependencies": {
+    "eslint": "^2.4.0",
+    "rimraf": "^2.5.2",
+    "tap": "^5.7.0"
+  },
+  "dependencies": {
+    "hashids": "^1.0.2",
+    "skip32": "^1.2.1"
+  }
+}

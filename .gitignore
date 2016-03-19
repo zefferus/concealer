@@ -1,0 +1,17 @@
+.DS_Store
+.env
+
+node_modules/
+coverage/
+artifacts/
+docs/
+.nyc_output/
+logs/
+
+*.log
+*.tap
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

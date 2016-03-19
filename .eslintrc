@@ -1,0 +1,29 @@
+{
+  "env": {
+    "node": true
+  },
+
+  "extends": "eslint:recommended",
+
+  "rules": {
+    "no-console": 2,
+
+    "curly": [ 2, "all" ],
+    "eqeqeq": [ 2, "smart" ],
+
+    "callback-return": 2,
+
+    "array-bracket-spacing": [ 1, "always", { "objectsInArrays": false, "arraysInArrays": false }],
+    "block-spacing": [ 1, "always" ],
+    "brace-style": 2,
+    "comma-spacing": 2,
+    "comma-style": 2,
+    "eol-last": 2,
+    "func-names": 1,
+    "indent": [ 2, 2, { "SwitchCase": 1 }],
+    "max-len": [ 1, 100, 2 ],
+    "no-trailing-spaces": 1,
+    "quotes": [ 2, "single", "avoid-escape" ],
+    "semi": [ 2, "always" ]
+  }
+}
