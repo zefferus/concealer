@@ -2,8 +2,16 @@ language: node_js
 
 node_js:
   - "4"
-  - "0.12"
-  - "0.10"
+  - "6"
   - "node"
+
+install:
+  - npm install
+
+script:
+  - npm run test-ci
+
+after_success:
+  - './node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls'
 
 sudo: false
