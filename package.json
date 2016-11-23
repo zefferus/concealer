@@ -1,16 +1,23 @@
 {
   "name": "concealer",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A primary key encoding utility",
-  "main": "src/concealer.js",
+  "main": "dist/concealer.js",
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4.0"
   },
   "scripts": {
-    "lint": "node_modules/.bin/eslint src",
-    "test": "node_modules/.bin/tap --cov --reporter=spec test/**/*.test.js",
-    "precoverage": "node_modules/.bin/rimraf coverage",
-    "coverage": "node_modules/.bin/tap --coverage-report=lcov"
+    "lint": "eslint src/**/*.ts",
+    "pretest": "rimraf dist && tsc",
+    "test": "nyc --cache ava --tap | tap-nyan",
+    "posttest": "nyc report --check-coverage --statements=90",
+    "coverage:report": "nyc report --reporter=lcov && opener ./coverage/lcov-report/index.html",
+    "pretest-ci": "rimraf dist && tsc",
+    "test-ci": "nyc --cache ava --verbose",
+    "posttest-ci": "nyc report --check-coverage --statements=90",
+    "prebuild": "npm run lint && npm run test && rimraf dist",
+    "build": "tsc -p tsconfig.build.json --sourceMap false -d",
+    "prepackage": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -29,13 +36,21 @@
     "url": "https://github.com/zefferus/concealer/issues"
   },
   "homepage": "https://github.com/zefferus/concealer#readme",
+  "typings": "dist/concealer.d.ts",
   "devDependencies": {
-    "eslint": "^2.4.0",
+    "@types/node": "^6.0.51",
+    "ava": "^0.17.0",
+    "coveralls": "^2.11.15",
+    "eslint": "^3.10.2",
+    "nyc": "^10.0.0",
+    "opener": "^1.4.2",
     "rimraf": "^2.5.2",
-    "tap": "^5.7.0"
+    "tap-nyan": "^1.1.0",
+    "typescript": "^2.1.1",
+    "typescript-eslint-parser": "^1.0.0"
   },
   "dependencies": {
-    "hashids": "^1.0.2",
+    "hashids": "^1.1.1",
     "skip32": "^1.2.1"
   }
 }

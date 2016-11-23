@@ -3,7 +3,11 @@
     "node": true
   },
 
-  "extends": "eslint:recommended",
+  "parser": "typescript-eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
 
   "rules": {
     "no-console": 2,

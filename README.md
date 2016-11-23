@@ -2,7 +2,7 @@
 
 A fast two-way encryption module to generate unique, random-appearing, non-sequential strings from integers. This is a great way to encode database primary keys before presenting them to the user.
 
-[![Build Status](https://travis-ci.org/zefferus/concealer.svg?branch=master)](https://travis-ci.org/zefferus/concealer)![Current Version](https://img.shields.io/npm/v/concealer.svg)
+[![Build Status](https://travis-ci.org/zefferus/concealer.svg?branch=master)](https://travis-ci.org/zefferus/concealer) [![Coverage Status](https://coveralls.io/repos/github/zefferus/concealer/badge.svg?branch=master)](https://coveralls.io/github/zefferus/concealer?branch=master) [![Current Version](https://img.shields.io/npm/v/concealer.svg)](https://www.npmjs.com/package/concealer)
 
 Development on **Concealer** is sponsored by [Sparo Labs](http://www.sparolabs.com/).
 

@@ -1,15 +1,15 @@
 {
   "name": "concealer",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "dependencies": {
     "hashids": {
-      "version": "1.0.2",
-      "from": "hashids@>=1.0.2 <2.0.0",
-      "resolved": "https://registry.npmjs.org/hashids/-/hashids-1.0.2.tgz"
+      "version": "1.1.1",
+      "from": "hashids@>=1.1.1 <2.0.0",
+      "resolved": "https://registry.npmjs.org/hashids/-/hashids-1.1.1.tgz"
     },
     "skip32": {
       "version": "1.2.1",
-      "from": "skip32@latest",
+      "from": "skip32@>=1.2.1 <2.0.0",
       "resolved": "https://registry.npmjs.org/skip32/-/skip32-1.2.1.tgz"
     }
   }
