@@ -17,7 +17,7 @@
     "posttest-ci": "nyc report --check-coverage --statements=90",
     "prebuild": "npm run lint && npm run test && rimraf dist",
     "build": "tsc -p tsconfig.build.json --sourceMap false -d",
-    "prepackage": "npm run build"
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
